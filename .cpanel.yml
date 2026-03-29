@@ -2,5 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/filascope/public_html
-    - /bin/cp -f index.html style.css app.js "$DEPLOYPATH/"
+    - /bin/cp -f index.html style.css app.js .htaccess "$DEPLOYPATH/"
     - /bin/cp -rf data "$DEPLOYPATH/"
