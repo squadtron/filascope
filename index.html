@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filascope — 3D Filament Comparison</title>
+  <meta name="description" content="Compare 3D printing filaments side-by-side. Visualise tensile strength, heat resistance, UV resistance, print ease and more across 26 filaments from Bambu Lab, eSUN, Polymaker, Prusament and others.">
+  <meta property="og:title" content="Filascope — 3D Filament Comparison">
+  <meta property="og:description" content="Scope out the right filament. Interactive radar and bar charts comparing mechanical and practical properties across brands.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://filascope.app">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Filascope — 3D Filament Comparison">
+  <meta name="twitter:description" content="Scope out the right filament. Compare tensile strength, heat resistance, UV resistance and more across 26 filaments.">
+  <link rel="canonical" href="https://filascope.app">
+  <meta name="robots" content="index, follow">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQXZ16455M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LQXZ16455M');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-brand">
+      <!-- Spool icon -->
+      <svg class="header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+        <circle cx="12" cy="12" r="9"/>
+        <circle cx="12" cy="12" r="4"/>
+        <line x1="12" y1="3" x2="12" y2="8"/>
+        <line x1="19.8" y1="16.5" x2="15.5" y2="14"/>
+        <line x1="4.2" y1="16.5" x2="8.5" y2="14"/>
+      </svg>
+      <div>
+        <h1>Filascope</h1>
+        <p class="header-sub">Scope out the right filament</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <span class="data-note">Data from manufacturer datasheets · rated scores are community estimates</span>
+      <button class="theme-toggle" id="theme-toggle" title="Toggle light / dark mode" aria-label="Toggle colour theme">
+        <!-- Moon icon — shown in dark mode -->
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <!-- Sun icon — shown in light mode -->
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- App layout -->
+  <div class="app-layout">
+
+    <!-- ═══ SIDEBAR ═══ -->
+    <aside class="sidebar">
+
+      <!-- Filament selector -->
+      <div class="sidebar-section">
+        <div class="section-header">
+          <h2 class="section-title">Filaments</h2>
+          <div class="section-actions">
+            <button class="link-btn" id="select-all-btn">All</button>
+            <span class="divider-dot">·</span>
+            <button class="link-btn" id="clear-all-btn">None</button>
+          </div>
+        </div>
+        <div id="filament-list" class="filament-list"></div>
+      </div>
+
+      <!-- Property toggles -->
+      <div class="sidebar-section">
+        <div class="section-header">
+          <h2 class="section-title">Properties</h2>
+          <button class="link-btn" id="reset-props-btn">Reset</button>
+        </div>
+        <p class="section-note">Toggle axes shown on radar chart</p>
+        <div id="property-list" class="property-list"></div>
+      </div>
+
+    </aside>
+
+    <!-- ═══ MAIN CONTENT ═══ -->
+    <main class="main-content">
+
+      <!-- Chart controls bar -->
+      <div class="chart-controls">
+        <div class="chart-tabs" role="tablist">
+          <button class="tab-btn active" data-chart="radar" role="tab" aria-selected="true">
+            <svg viewBox="0 0 16 16" fill="currentColor"><polygon points="8,1 15,5.5 15,10.5 8,15 1,10.5 1,5.5"/></svg>
+            Radar
+          </button>
+          <button class="tab-btn" data-chart="bar" role="tab" aria-selected="false">
+            <svg viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="5" width="3" height="10"/><rect x="6" y="2" width="3" height="13"/><rect x="11" y="7" width="3" height="8"/></svg>
+            Bar
+          </button>
+        </div>
+
+        <!-- Bar chart property picker (hidden for radar) -->
+        <div class="bar-controls" id="bar-controls">
+          <label class="bar-label" for="bar-property">Showing:</label>
+          <select id="bar-property" class="styled-select"></select>
+        </div>
+
+        <!-- Chart info badge -->
+        <div class="chart-mode-info" id="chart-mode-info">
+          Radar values normalised 0–100 · hover for raw data
+        </div>
+      </div>
+
+      <!-- Chart canvas area -->
+      <div class="chart-wrapper" id="chart-wrapper">
+        <canvas id="main-chart"></canvas>
+        <div class="empty-state" id="empty-state">
+          <div class="empty-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polygon points="24,4 44,16 44,32 24,44 4,32 4,16"/>
+              <line x1="24" y1="4" x2="24" y2="44"/>
+              <line x1="4" y1="16" x2="44" y2="16"/>
+              <line x1="4" y1="32" x2="44" y2="32"/>
+            </svg>
+          </div>
+          <p>Select filaments from the sidebar to compare</p>
+          <p class="empty-hint">Try selecting PAHT-CF alongside ASA or PETG-CF</p>
+        </div>
+      </div>
+
+      <!-- Selected filament pills -->
+      <div class="selection-strip" id="selection-strip"></div>
+
+    </main>
+  </div>
+
+  <!-- Filament detail tooltip (hidden by default) -->
+  <div class="detail-card" id="detail-card" style="display:none">
+    <div class="detail-header">
+      <span class="detail-dot" id="detail-dot"></span>
+      <strong id="detail-name"></strong>
+    </div>
+    <div class="detail-notes" id="detail-notes"></div>
+    <div class="detail-badges" id="detail-badges"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

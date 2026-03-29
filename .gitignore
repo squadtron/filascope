@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local dev tooling (not needed in the repo)
+.claude/
+
+# Dependencies (if a build step is ever added)
+node_modules/
+
+# Environment
+.env
+.env.*

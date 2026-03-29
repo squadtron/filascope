@@ -1,0 +1,894 @@
+{
+  "filaments": [
+    {
+      "id": "bambu-paht-cf",
+      "name": "PAHT-CF",
+      "manufacturer": "Bambu Lab",
+      "type": "PA-CF",
+      "properties": {
+        "tensile_strength": 103,
+        "flexural_modulus": 8700,
+        "heat_deflection_temp": 180,
+        "impact_strength": 30,
+        "uv_resistance": 7,
+        "chemical_resistance": 7,
+        "print_ease": 3,
+        "moisture_resistance": 5
+      },
+      "print_settings": {
+        "print_temp_min": 280,
+        "print_temp_max": 300,
+        "bed_temp": 90,
+        "enclosure": "required",
+        "hardened_nozzle": true
+      },
+      "applications": {
+        "outdoor": true,
+        "structural": true,
+        "high_temp": true,
+        "flexible": false,
+        "food_safe": false
+      },
+      "notes": "High-temp PA with carbon fibre reinforcement. Excellent stiffness and strength. Requires all-metal hotend and hardened nozzle.",
+      "data_source": "Bambu Lab datasheet + community testing"
+    },
+    {
+      "id": "bambu-pa6-gf",
+      "name": "PA6-GF",
+      "manufacturer": "Bambu Lab",
+      "type": "PA-GF",
+      "properties": {
+        "tensile_strength": 85,
+        "flexural_modulus": 6500,
+        "heat_deflection_temp": 170,
+        "impact_strength": 35,
+        "uv_resistance": 5,
+        "chemical_resistance": 7,
+        "print_ease": 3,
+        "moisture_resistance": 4
+      },
+      "print_settings": {
+        "print_temp_min": 260,
+        "print_temp_max": 280,
+        "bed_temp": 80,
+        "enclosure": "required",
+        "hardened_nozzle": true
+      },
+      "applications": {
+        "outdoor": false,
+        "structural": true,
+        "high_temp": true,
+        "flexible": false,
+        "food_safe": false
+      },
+      "notes": "Nylon 6 with glass fibre. Good stiffness and impact resistance. Highly hygroscopic — must be stored dry.",
+      "data_source": "Bambu Lab datasheet"
+    },
+    {
+      "id": "bambu-asa",
+      "name": "ASA",
+      "manufacturer": "Bambu Lab",
+      "type": "ASA",
+      "properties": {
+        "tensile_strength": 47,
+        "flexural_modulus": 2300,
+        "heat_deflection_temp": 104,
+        "impact_strength": 18,
+        "uv_resistance": 9,
+        "chemical_resistance": 7,
+        "print_ease": 5,
+        "moisture_resistance": 9
+      },
+      "print_settings": {
+        "print_temp_min": 240,
+        "print_temp_max": 260,
+        "bed_temp": 90,
+        "enclosure": "recommended",
+        "hardened_nozzle": false
+      },
+      "applications": {
+        "outdoor": true,
+        "structural": false,
+        "high_temp": false,
+        "flexible": false,
+        "food_safe": false
+      },
+      "notes": "Best all-around for outdoor use. Excellent UV stability and weather resistance. Similar to ABS but no UV degradation.",
+      "data_source": "Bambu Lab datasheet"
+    },
+    {
+      "id": "bambu-abs",
+      "name": "ABS",
+      "manufacturer": "Bambu Lab",
+      "type": "ABS",
+      "properties": {
+        "tensile_strength": 43,
+        "flexural_modulus": 2100,
+        "heat_deflection_temp": 98,
+        "impact_strength": 19,
+        "uv_resistance": 3,
+        "chemical_resistance": 6,
+        "print_ease": 5,
+        "moisture_resistance": 9
+      },
+      "print_settings": {
+        "print_temp_min": 240,
+        "print_temp_max": 260,
+        "bed_temp": 80,
+        "enclosure": "required",
+        "hardened_nozzle": false
+      },
+      "applications": {
+        "outdoor": false,
+        "structural": false,
+        "high_temp": false,
+        "flexible": false,
+        "food_safe": false
+      },
+      "notes": "Classic engineering plastic. Good heat resistance but degrades outdoors. Use ASA instead for outdoor parts.",
+      "data_source": "Bambu Lab datasheet"
+    },
+    {
+      "id": "bambu-pc",
+      "name": "PC",
+      "manufacturer": "Bambu Lab",
+      "type": "PC",
+      "properties": {
+        "tensile_strength": 55,
+        "flexural_modulus": 2200,
+        "heat_deflection_temp": 115,
+        "impact_strength": 50,
+        "uv_resistance": 6,
+        "chemical_resistance": 5,
+        "print_ease": 4,
+        "moisture_resistance": 7
+      },
+      "print_settings": {
+        "print_temp_min": 260,
+        "print_temp_max": 280,
+        "bed_temp": 100,
+        "enclosure": "required",
+        "hardened_nozzle": false
+      },
+      "applications": {
+        "outdoor": false,
+        "structural": true,
+        "high_temp": true,
+        "flexible": false,
+        "food_safe": false
+      },
+      "notes": "Exceptionally tough (highest impact in this list). Good heat resistance. Optical clarity possible. Prone to moisture absorption.",
+      "data_source": "Bambu Lab datasheet"
+    },
+    {
+      "id": "bambu-petg-cf",
+      "name": "PETG-CF",
+      "manufacturer": "Bambu Lab",
+      "type": "PETG-CF",
+      "properties": {
+        "tensile_strength": 65,
+        "flexural_modulus": 5000,
+        "heat_deflection_temp": 90,
+        "impact_strength": 6,
+        "uv_resistance": 5,
+        "chemical_resistance": 7,
+        "print_ease": 7,
+        "moisture_resistance": 8
+      },
+      "print_settings": {
+        "print_temp_min": 250,
+        "print_temp_max": 270,
+        "bed_temp": 70,
+        "enclosure": "optional",
+        "hardened_nozzle": true
+      },
+      "applications": {
+        "outdoor": false,
+        "structural": true,
+        "high_temp": false,
+        "flexible": false,
+        "food_safe": false
+      },
+      "notes": "Carbon-reinforced PETG. Much stiffer than standard PETG with reasonable print ease. Good for structural parts needing stiffness over toughness.",
+      "data_source": "Bambu Lab datasheet + community testing"
+    },
+    {
+      "id": "bambu-petg-hf",
+      "name": "PETG HF",
+      "manufacturer": "Bambu Lab",
+      "type": "PETG",
+      "properties": {
+        "tensile_strength": 50,
+        "flexural_modulus": 1900,
+        "heat_deflection_temp": 79,
+        "impact_strength": 7,
+        "uv_resistance": 5,
+        "chemical_resistance": 7,
+        "print_ease": 8,
+        "moisture_resistance": 8
+      },
+      "print_settings": {
+        "print_temp_min": 230,
+        "print_temp_max": 250,
+        "bed_temp": 70,
+        "enclosure": "optional",
+        "hardened_nozzle": false
+      },
+      "applications": {
+        "outdoor": false,
+        "structural": false,
+        "high_temp": false,
+        "flexible": false,
+        "food_safe": true
+      },
+      "notes": "Easy-printing PETG with decent chemical resistance. Good general-purpose choice for non-structural parts. Food-safe variant available.",
+      "data_source": "Bambu Lab datasheet"
+    },
+    {
+      "id": "bambu-pla",
+      "name": "PLA Basic",
+      "manufacturer": "Bambu Lab",
+      "type": "PLA",
+      "properties": {
+        "tensile_strength": 65,
+        "flexural_modulus": 3550,
+        "heat_deflection_temp": 55,
+        "impact_strength": 4,
+        "uv_resistance": 2,
+        "chemical_resistance": 3,
+        "print_ease": 10,
+        "moisture_resistance": 8
+      },
+      "print_settings": {
+        "print_temp_min": 190,
+        "print_temp_max": 220,
+        "bed_temp": 35,
+        "enclosure": "not_needed",
+        "hardened_nozzle": false
+      },
+      "applications": {
+        "outdoor": false,
+        "structural": false,
+        "high_temp": false,
+        "flexible": false,
+        "food_safe": false
+      },
+      "notes": "Easiest material to print. Brittle and low heat resistance. Only suitable for indoor, non-functional, non-structural parts.",
+      "data_source": "Bambu Lab datasheet"
+    },
+    {
+      "id": "esun-epa-cf",
+      "name": "ePA-CF",
+      "manufacturer": "eSUN",
+      "type": "PA-CF",
+      "properties": {
+        "tensile_strength": 95,
+        "flexural_modulus": 7500,
+        "heat_deflection_temp": 175,
+        "impact_strength": 28,
+        "uv_resistance": 7,
+        "chemical_resistance": 7,
+        "print_ease": 3,
+        "moisture_resistance": 5
+      },
+      "print_settings": {
+        "print_temp_min": 260,
+        "print_temp_max": 280,
+        "bed_temp": 80,
+        "enclosure": "required",
+        "hardened_nozzle": true
+      },
+      "applications": {
+        "outdoor": true,
+        "structural": true,
+        "high_temp": true,
+        "flexible": false,
+        "food_safe": false
+      },
+      "notes": "eSUN's carbon fibre PA. Comparable to Bambu PAHT-CF at a different price point. Slightly lower print temperature.",
+      "data_source": "eSUN datasheet + community testing"
+    },
+    {
+      "id": "polymaker-pa6-cf",
+      "name": "PolyMide PA6-CF",
+      "manufacturer": "Polymaker",
+      "type": "PA-CF",
+      "properties": {
+        "tensile_strength": 90,
+        "flexural_modulus": 7000,
+        "heat_deflection_temp": 165,
+        "impact_strength": 30,
+        "uv_resistance": 6,
+        "chemical_resistance": 7,
+        "print_ease": 4,
+        "moisture_resistance": 5
+      },
+      "print_settings": {
+        "print_temp_min": 260,
+        "print_temp_max": 285,
+        "bed_temp": 80,
+        "enclosure": "required",
+        "hardened_nozzle": true
+      },
+      "applications": {
+        "outdoor": true,
+        "structural": true,
+        "high_temp": true,
+        "flexible": false,
+        "food_safe": false
+      },
+      "notes": "Polymaker's PA6-CF with good documentation and consistent quality. Slightly easier to print than Bambu PAHT-CF.",
+      "data_source": "Polymaker datasheet"
+    },
+    {
+      "id": "prusament-petg",
+      "name": "PETG",
+      "manufacturer": "Prusament",
+      "type": "PETG",
+      "properties": {
+        "tensile_strength": 52,
+        "flexural_modulus": 2000,
+        "heat_deflection_temp": 80,
+        "impact_strength": 7,
+        "uv_resistance": 5,
+        "chemical_resistance": 7,
+        "print_ease": 8,
+        "moisture_resistance": 8
+      },
+      "print_settings": {
+        "print_temp_min": 230,
+        "print_temp_max": 250,
+        "bed_temp": 80,
+        "enclosure": "optional",
+        "hardened_nozzle": false
+      },
+      "applications": {
+        "outdoor": false,
+        "structural": false,
+        "high_temp": false,
+        "flexible": false,
+        "food_safe": true
+      },
+      "notes": "Well-regarded PETG from Prusa Research. Very consistent quality. Good for general-purpose parts where PLA is not adequate.",
+      "data_source": "Prusament datasheet"
+    },
+    {
+      "id": "prusament-pla-tough",
+      "name": "PLA Tough",
+      "manufacturer": "Prusament",
+      "type": "PLA",
+      "properties": {
+        "tensile_strength": 62,
+        "flexural_modulus": 3200,
+        "heat_deflection_temp": 57,
+        "impact_strength": 8,
+        "uv_resistance": 2,
+        "chemical_resistance": 3,
+        "print_ease": 9,
+        "moisture_resistance": 8
+      },
+      "print_settings": {
+        "print_temp_min": 210,
+        "print_temp_max": 230,
+        "bed_temp": 60,
+        "enclosure": "not_needed",
+        "hardened_nozzle": false
+      },
+      "applications": {
+        "outdoor": false,
+        "structural": false,
+        "high_temp": false,
+        "flexible": false,
+        "food_safe": false
+      },
+      "notes": "Modified PLA with improved impact resistance. Easier to print than PETG while being more impact-resistant than standard PLA.",
+      "data_source": "Prusament datasheet"
+    },
+    {
+      "id": "prusament-asa",
+      "name": "ASA",
+      "manufacturer": "Prusament",
+      "type": "ASA",
+      "properties": {
+        "tensile_strength": 47,
+        "flexural_modulus": 2000,
+        "heat_deflection_temp": 97,
+        "impact_strength": 15,
+        "uv_resistance": 8,
+        "chemical_resistance": 6,
+        "print_ease": 6,
+        "moisture_resistance": 9
+      },
+      "print_settings": {
+        "print_temp_min": 240,
+        "print_temp_max": 260,
+        "bed_temp": 100,
+        "enclosure": "recommended",
+        "hardened_nozzle": false
+      },
+      "applications": {
+        "outdoor": true,
+        "structural": false,
+        "high_temp": false,
+        "flexible": false,
+        "food_safe": false
+      },
+      "notes": "Prusament ASA with very good UV and weather resistance. Consistent quality typical of the Prusament line. Solid outdoor choice alongside Bambu ASA.",
+      "data_source": "Prusament datasheet"
+    },
+    {
+      "id": "prusament-pc-blend",
+      "name": "PC Blend",
+      "manufacturer": "Prusament",
+      "type": "PC",
+      "properties": {
+        "tensile_strength": 52,
+        "flexural_modulus": 2100,
+        "heat_deflection_temp": 95,
+        "impact_strength": 30,
+        "uv_resistance": 5,
+        "chemical_resistance": 7,
+        "print_ease": 5,
+        "moisture_resistance": 7
+      },
+      "print_settings": {
+        "print_temp_min": 270,
+        "print_temp_max": 285,
+        "bed_temp": 105,
+        "enclosure": "required",
+        "hardened_nozzle": false
+      },
+      "applications": {
+        "outdoor": false,
+        "structural": true,
+        "high_temp": true,
+        "flexible": false,
+        "food_safe": false
+      },
+      "notes": "PC/ABS blend combining PC toughness with better printability than pure PC. Good structural and thermal performance for functional parts.",
+      "data_source": "Prusament datasheet"
+    },
+    {
+      "id": "polymaker-polymax-pc",
+      "name": "PolyMax PC",
+      "manufacturer": "Polymaker",
+      "type": "PC",
+      "properties": {
+        "tensile_strength": 62,
+        "flexural_modulus": 2300,
+        "heat_deflection_temp": 106,
+        "impact_strength": 35,
+        "uv_resistance": 4,
+        "chemical_resistance": 8,
+        "print_ease": 4,
+        "moisture_resistance": 6
+      },
+      "print_settings": {
+        "print_temp_min": 260,
+        "print_temp_max": 280,
+        "bed_temp": 100,
+        "enclosure": "required",
+        "hardened_nozzle": false
+      },
+      "applications": {
+        "outdoor": false,
+        "structural": true,
+        "high_temp": true,
+        "flexible": false,
+        "food_safe": false
+      },
+      "notes": "Toughened polycarbonate with excellent impact resistance and chemical resistance. Requires enclosed printer and well-dried filament.",
+      "data_source": "Polymaker datasheet"
+    },
+    {
+      "id": "polymaker-polymide-copa",
+      "name": "PolyMide CoPA",
+      "manufacturer": "Polymaker",
+      "type": "PA",
+      "properties": {
+        "tensile_strength": 55,
+        "flexural_modulus": 2100,
+        "heat_deflection_temp": 180,
+        "impact_strength": 8,
+        "uv_resistance": 3,
+        "chemical_resistance": 7,
+        "print_ease": 5,
+        "moisture_resistance": 3
+      },
+      "print_settings": {
+        "print_temp_min": 260,
+        "print_temp_max": 285,
+        "bed_temp": 90,
+        "enclosure": "required",
+        "hardened_nozzle": false
+      },
+      "applications": {
+        "outdoor": false,
+        "structural": true,
+        "high_temp": true,
+        "flexible": false,
+        "food_safe": false
+      },
+      "notes": "Nylon copolymer with exceptional heat deflection. Extremely hygroscopic — must be printed bone dry. High flexibility and chemical resistance.",
+      "data_source": "Polymaker datasheet"
+    },
+    {
+      "id": "polymaker-polymax-petg",
+      "name": "PolyMax PETG",
+      "manufacturer": "Polymaker",
+      "type": "PETG",
+      "properties": {
+        "tensile_strength": 45,
+        "flexural_modulus": 1750,
+        "heat_deflection_temp": 72,
+        "impact_strength": 8,
+        "uv_resistance": 5,
+        "chemical_resistance": 7,
+        "print_ease": 8,
+        "moisture_resistance": 8
+      },
+      "print_settings": {
+        "print_temp_min": 235,
+        "print_temp_max": 250,
+        "bed_temp": 80,
+        "enclosure": "optional",
+        "hardened_nozzle": false
+      },
+      "applications": {
+        "outdoor": false,
+        "structural": false,
+        "high_temp": false,
+        "flexible": false,
+        "food_safe": true
+      },
+      "notes": "Toughened PETG with significantly better impact resistance than standard PETG. Good balance of printability and durability for functional parts.",
+      "data_source": "Polymaker datasheet"
+    },
+    {
+      "id": "esun-pla-plus",
+      "name": "PLA+",
+      "manufacturer": "eSUN",
+      "type": "PLA",
+      "properties": {
+        "tensile_strength": 65,
+        "flexural_modulus": 2800,
+        "heat_deflection_temp": 58,
+        "impact_strength": 5,
+        "uv_resistance": 2,
+        "chemical_resistance": 3,
+        "print_ease": 9,
+        "moisture_resistance": 8
+      },
+      "print_settings": {
+        "print_temp_min": 205,
+        "print_temp_max": 225,
+        "bed_temp": 60,
+        "enclosure": "not_needed",
+        "hardened_nozzle": false
+      },
+      "applications": {
+        "outdoor": false,
+        "structural": false,
+        "high_temp": false,
+        "flexible": false,
+        "food_safe": false
+      },
+      "notes": "Improved PLA with better toughness and layer adhesion than standard PLA. Very easy to print. Suitable for indoor non-functional parts only.",
+      "data_source": "eSUN datasheet + community testing"
+    },
+    {
+      "id": "esun-abs-plus",
+      "name": "ABS+",
+      "manufacturer": "eSUN",
+      "type": "ABS",
+      "properties": {
+        "tensile_strength": 45,
+        "flexural_modulus": 2100,
+        "heat_deflection_temp": 89,
+        "impact_strength": 8,
+        "uv_resistance": 3,
+        "chemical_resistance": 6,
+        "print_ease": 6,
+        "moisture_resistance": 9
+      },
+      "print_settings": {
+        "print_temp_min": 230,
+        "print_temp_max": 250,
+        "bed_temp": 90,
+        "enclosure": "required",
+        "hardened_nozzle": false
+      },
+      "applications": {
+        "outdoor": false,
+        "structural": false,
+        "high_temp": false,
+        "flexible": false,
+        "food_safe": false
+      },
+      "notes": "Modified ABS with improved toughness and layer adhesion. Easier to print than standard ABS but still needs an enclosure. Use ASA for outdoor parts.",
+      "data_source": "eSUN datasheet"
+    },
+    {
+      "id": "esun-petg",
+      "name": "PETG",
+      "manufacturer": "eSUN",
+      "type": "PETG",
+      "properties": {
+        "tensile_strength": 50,
+        "flexural_modulus": 1800,
+        "heat_deflection_temp": 77,
+        "impact_strength": 5,
+        "uv_resistance": 5,
+        "chemical_resistance": 7,
+        "print_ease": 8,
+        "moisture_resistance": 8
+      },
+      "print_settings": {
+        "print_temp_min": 230,
+        "print_temp_max": 250,
+        "bed_temp": 75,
+        "enclosure": "optional",
+        "hardened_nozzle": false
+      },
+      "applications": {
+        "outdoor": false,
+        "structural": false,
+        "high_temp": false,
+        "flexible": false,
+        "food_safe": true
+      },
+      "notes": "eSUN's standard PETG. Reliable general-purpose material comparable to Prusament PETG. Food-safe version available. Good value for money.",
+      "data_source": "eSUN datasheet"
+    },
+    {
+      "id": "esun-epc",
+      "name": "ePC",
+      "manufacturer": "eSUN",
+      "type": "PC",
+      "properties": {
+        "tensile_strength": 62,
+        "flexural_modulus": 2400,
+        "heat_deflection_temp": 120,
+        "impact_strength": 40,
+        "uv_resistance": 5,
+        "chemical_resistance": 8,
+        "print_ease": 4,
+        "moisture_resistance": 7
+      },
+      "print_settings": {
+        "print_temp_min": 265,
+        "print_temp_max": 285,
+        "bed_temp": 100,
+        "enclosure": "required",
+        "hardened_nozzle": false
+      },
+      "applications": {
+        "outdoor": false,
+        "structural": true,
+        "high_temp": true,
+        "flexible": false,
+        "food_safe": false
+      },
+      "notes": "eSUN's polycarbonate — outstanding impact resistance and heat resistance. Challenging to print; requires stable enclosed environment and dry storage.",
+      "data_source": "eSUN datasheet"
+    },
+    {
+      "id": "colorfabb-xt",
+      "name": "XT",
+      "manufacturer": "colorFabb",
+      "type": "PETG",
+      "properties": {
+        "tensile_strength": 50,
+        "flexural_modulus": 1900,
+        "heat_deflection_temp": 73,
+        "impact_strength": 6,
+        "uv_resistance": 5,
+        "chemical_resistance": 7,
+        "print_ease": 8,
+        "moisture_resistance": 8
+      },
+      "print_settings": {
+        "print_temp_min": 235,
+        "print_temp_max": 250,
+        "bed_temp": 65,
+        "enclosure": "optional",
+        "hardened_nozzle": false
+      },
+      "applications": {
+        "outdoor": false,
+        "structural": false,
+        "high_temp": false,
+        "flexible": false,
+        "food_safe": true
+      },
+      "notes": "colorFabb's PETG-like Amphora co-polyester. Known for excellent clarity and surface finish. FDA-compliant formulation available. Prints very cleanly.",
+      "data_source": "colorFabb datasheet"
+    },
+    {
+      "id": "colorfabb-ht",
+      "name": "HT",
+      "manufacturer": "colorFabb",
+      "type": "PETG",
+      "properties": {
+        "tensile_strength": 55,
+        "flexural_modulus": 2200,
+        "heat_deflection_temp": 100,
+        "impact_strength": 6,
+        "uv_resistance": 5,
+        "chemical_resistance": 7,
+        "print_ease": 7,
+        "moisture_resistance": 7
+      },
+      "print_settings": {
+        "print_temp_min": 255,
+        "print_temp_max": 270,
+        "bed_temp": 75,
+        "enclosure": "recommended",
+        "hardened_nozzle": false
+      },
+      "applications": {
+        "outdoor": false,
+        "structural": true,
+        "high_temp": true,
+        "flexible": false,
+        "food_safe": false
+      },
+      "notes": "Amphora-based high-temp co-polyester. Significantly higher heat deflection than standard PETG. Good for enclosures and parts near heat sources.",
+      "data_source": "colorFabb datasheet"
+    },
+    {
+      "id": "fiberlogy-pctg",
+      "name": "PCTG",
+      "manufacturer": "Fiberlogy",
+      "type": "PETG",
+      "properties": {
+        "tensile_strength": 52,
+        "flexural_modulus": 2100,
+        "heat_deflection_temp": 82,
+        "impact_strength": 10,
+        "uv_resistance": 5,
+        "chemical_resistance": 7,
+        "print_ease": 8,
+        "moisture_resistance": 8
+      },
+      "print_settings": {
+        "print_temp_min": 235,
+        "print_temp_max": 250,
+        "bed_temp": 75,
+        "enclosure": "optional",
+        "hardened_nozzle": false
+      },
+      "applications": {
+        "outdoor": false,
+        "structural": false,
+        "high_temp": false,
+        "flexible": false,
+        "food_safe": true
+      },
+      "notes": "PETG variant with better clarity, toughness and HDT than standard PETG. Excellent surface finish and layer adhesion. Biocompatible grades available.",
+      "data_source": "Fiberlogy datasheet"
+    },
+    {
+      "id": "bambu-pc-abs",
+      "name": "PC-ABS",
+      "manufacturer": "Bambu Lab",
+      "type": "PC",
+      "properties": {
+        "tensile_strength": 52,
+        "flexural_modulus": 2200,
+        "heat_deflection_temp": 107,
+        "impact_strength": 35,
+        "uv_resistance": 5,
+        "chemical_resistance": 6,
+        "print_ease": 5,
+        "moisture_resistance": 7
+      },
+      "print_settings": {
+        "print_temp_min": 260,
+        "print_temp_max": 280,
+        "bed_temp": 90,
+        "enclosure": "required",
+        "hardened_nozzle": false
+      },
+      "applications": {
+        "outdoor": false,
+        "structural": true,
+        "high_temp": true,
+        "flexible": false,
+        "food_safe": false
+      },
+      "notes": "PC/ABS alloy combining toughness and heat resistance with better printability than pure PC. Common for automotive and industrial prototyping.",
+      "data_source": "Bambu Lab datasheet"
+    },
+    {
+      "id": "bambu-pa12-cf",
+      "name": "PA12-CF",
+      "manufacturer": "Bambu Lab",
+      "type": "PA-CF",
+      "properties": {
+        "tensile_strength": 75,
+        "flexural_modulus": 4200,
+        "heat_deflection_temp": 130,
+        "impact_strength": 20,
+        "uv_resistance": 6,
+        "chemical_resistance": 8,
+        "print_ease": 5,
+        "moisture_resistance": 7
+      },
+      "print_settings": {
+        "print_temp_min": 250,
+        "print_temp_max": 270,
+        "bed_temp": 90,
+        "enclosure": "required",
+        "hardened_nozzle": true
+      },
+      "applications": {
+        "outdoor": true,
+        "structural": true,
+        "high_temp": true,
+        "flexible": false,
+        "food_safe": false
+      },
+      "notes": "PA12 with carbon fibre reinforcement. Lower moisture absorption than PA6-CF variants. Excellent dimensional stability and chemical resistance.",
+      "data_source": "Bambu Lab datasheet"
+    }
+  ],
+  "properties_meta": {
+    "tensile_strength": {
+      "label": "Tensile Strength",
+      "unit": "MPa",
+      "description": "Maximum stress a material can withstand before breaking (ISO 527)",
+      "max_reference": 150,
+      "min_reference": 0
+    },
+    "flexural_modulus": {
+      "label": "Stiffness",
+      "unit": "MPa",
+      "description": "Resistance to bending deformation — higher = stiffer (ISO 178)",
+      "max_reference": 12000,
+      "min_reference": 0
+    },
+    "heat_deflection_temp": {
+      "label": "Heat Resistance",
+      "unit": "°C",
+      "description": "Temperature at which material deforms under 0.45 MPa load (ISO 75)",
+      "max_reference": 250,
+      "min_reference": 20
+    },
+    "impact_strength": {
+      "label": "Impact Strength",
+      "unit": "kJ/m²",
+      "description": "Energy absorbed before fracture — Charpy notched (ISO 179)",
+      "max_reference": 55,
+      "min_reference": 0
+    },
+    "uv_resistance": {
+      "label": "UV Resistance",
+      "unit": "/10",
+      "description": "Resistance to UV degradation for outdoor use (rated score)",
+      "max_reference": 10,
+      "min_reference": 0
+    },
+    "chemical_resistance": {
+      "label": "Chemical Resistance",
+      "unit": "/10",
+      "description": "Resistance to common chemicals and solvents (rated score)",
+      "max_reference": 10,
+      "min_reference": 0
+    },
+    "print_ease": {
+      "label": "Print Ease",
+      "unit": "/10",
+      "description": "Ease of printing — 10 is easiest (rated score)",
+      "max_reference": 10,
+      "min_reference": 0
+    },
+    "moisture_resistance": {
+      "label": "Moisture Resistance",
+      "unit": "/10",
+      "description": "Resistance to moisture absorption — 10 is best (rated score)",
+      "max_reference": 10,
+      "min_reference": 0
+    }
+  }
+}
